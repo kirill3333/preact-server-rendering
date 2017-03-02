@@ -10,16 +10,12 @@ const appComponent = require('./../dist/app').AppComponent
 app.use(express.static('build'))
 
 app.get('/', function (req, res) {
-
-  /*new Zone().run(() => {
-    return h(appComponent)
-  }).then(virtualDom => {
-    let html = render(virtualDom.result)
-    res.send(html)
-  })*/
   let virtualDom = h(appComponent)
-  let html = render(virtualDom)
-  res.send(html)
+  new Zone().run(() => {
+    let html = render(virtualDom)
+  }).then((zone) => {
+    res.send(zone.result)
+  })
 })
 
 app.listen(3003, function () {
