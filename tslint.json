@@ -1,0 +1,65 @@
+{
+  "name": "@solid-opinion/soflux",
+  "version": "0.1.2",
+  "description": "flux library (same as @ngrx but without ng2 dependecies)",
+  "main": "./dist/bundle.js",
+  "scripts": {
+    "rimraf": "rimraf",
+    "tslint": "tslint",
+    "typedoc": "typedoc",
+    "typings": "typings",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "clean": "npm cache clean && npm run rimraf -- node_modules doc typings coverage dist",
+    "clean:dist": "npm run rimraf -- dist",
+    "watch": "npm run build -- --watch",
+    "build": "npm run build:prod",
+    "build:prod": "webpack --config config/prod.webpack.conf.js --profile --colors --display-error-details --display-cached",
+    "build:local": "webpack --config config/local.webpack.conf.js --profile --colors --display-error-details --display-cached",
+    "build:example": "webpack --config example/webpack.conf.js --profile --colors --display-error-details --display-cached",
+    "start": "NODE_ENV=dev webpack-dev-server --config config/webpack.conf.js --inline --progress --profile --watch --content-base build/",
+    "start:example": "npm run build && webpack-dev-server --config example/local.webpack.conf.js --inline --progress --profile --watch --content-base example/",
+    "lint": "npm run tslint src/**/*.ts",
+    "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
+    "postinstall": "npm run typings -- install",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolidOpinion/soflux"
+  },
+  "author": "Solidopinion frontend team",
+  "license": "ISC",
+  "homepage": "https://github.com/SolidOpinion/soflux",
+  "dependencies": {
+    "lodash": "4.17.4",
+    "preact": "7.2.0",
+    "rxjs": "5.1.0",
+    "@solid-opinion/vendor-common": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/browser-sync": "0.0.34",
+    "@types/node": "*",
+    "@types/rimraf": "0.0.28",
+    "@types/webpack": "2.2.6",
+    "awesome-typescript-loader": "3.0.4",
+    "compression-webpack-plugin": "^0.3.2",
+    "copy-webpack-plugin": "4.0.1",
+    "http-server": "0.9.0",
+    "source-map-loader": "0.1.5",
+    "superagent": "^3.4.1",
+    "tslint": "4.4.2",
+    "tslint-loader": "3.4.2",
+    "typedoc": "0.5.6",
+    "typescript": "2.1.6",
+    "typings": "2.1.0",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.3.0",
+    "webpack-merge": "2.6.1"
+  },
+  "engines": {
+    "node": "6.9.5"
+  }
+}

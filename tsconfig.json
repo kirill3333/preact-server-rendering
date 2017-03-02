@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": false,
+    "pretty": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015"
+    ],
+    "jsx": "react",
+    "jsxFactory": "h",
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+
+    "noLib": false,
+    "noEmitHelpers": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitUseStrict": true,
+
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+
+    "baseUrl": "./",
+
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules"
+    ],
+    "types": [
+      "node",
+      "webpack",
+      "react"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "typings",
+    "**/*.spec.ts"
+  ],
+  "compileOnSave": false,
+  "awesomeTypescriptLoaderOptions": {
+    "resolveGlobs": true,
+    "forkChecker": true,
+    "compiler": "ntypescript"
+  }
+}

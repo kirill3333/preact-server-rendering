@@ -1,0 +1,47 @@
+{
+  "name": "preact-server-rendering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config config/webpack.conf.js --profile --colors --display-error-details --display-cached",
+    "server": "node ./server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirill3333/preact-server-rendering.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirill3333/preact-server-rendering/issues"
+  },
+  "homepage": "https://github.com/kirill3333/preact-server-rendering#readme",
+  "dependencies": {
+    "@solid-opinion/soflux": "^0.1.5",
+    "@solid-opinion/vendor-common": "0.2.2",
+    "can-zone": "^0.6.4",
+    "express": "^4.14.1",
+    "preact": "^7.2.0",
+    "preact-render-to-string": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "@types/react": "^15.0.14",
+    "@types/webpack": "2.2.6",
+    "awesome-typescript-loader": "^3.0.8",
+    "copy-webpack-plugin": "^4.0.1",
+    "source-map-loader": "^0.1.6",
+    "superagent": "^3.5.0",
+    "tslint-loader": "3.4.2",
+    "ts-loader": "^2.0.1",
+    "tslint": "4.4.2",
+    "typedoc": "0.5.6",
+    "typescript": "^2.2.1",
+    "typings": "2.1.0",
+    "webpack": "^2.2.1"
+  },
+  "engines": {
+    "node": "6.9.5"
+  }
+}
