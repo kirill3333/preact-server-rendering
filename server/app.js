@@ -4,18 +4,15 @@ const h = require('preact').h
 const render = require('preact-render-to-string')
 const Zone = require("can-zone");
 
-const appComponent = require('./../dist/app').AppComponent
+const appComponent = require('./../dist/app').RootComponent
 
 
 app.use(express.static('build'))
 
 app.get('/', function (req, res) {
   let virtualDom = h(appComponent)
-  new Zone().run(() => {
-    let html = render(virtualDom)
-  }).then((zone) => {
-    res.send(zone.result)
-  })
+  let html =  render(virtualDom)
+  res.send(html)
 })
 
 app.listen(3003, function () {
