@@ -11,8 +11,12 @@ app.use(express.static('build'))
 
 app.get('/', function (req, res) {
   let virtualDom = h(appComponent)
-  let html =  render(virtualDom)
-  res.send(html)
+  let html = ''
+  render(virtualDom).then((result) => {
+    html = result
+    res.send(html)
+  })
+
 })
 
 app.listen(3003, function () {
