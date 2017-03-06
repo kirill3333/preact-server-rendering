@@ -22,12 +22,12 @@
     "@solid-opinion/vendor-common": "0.2.2",
     "can-zone": "^0.6.4",
     "express": "^4.14.1",
+    "lodash": "^4.17.4",
     "preact": "^7.2.0",
     "preact-render-to-string": "^3.6.0"
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
-    "@types/react": "^15.0.14",
     "@types/webpack": "2.2.6",
     "awesome-typescript-loader": "^3.0.8",
     "copy-webpack-plugin": "^4.0.1",

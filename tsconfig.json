@@ -9,32 +9,27 @@
     "lib": [
       "dom",
       "es5",
-      "es2015"
+      "es2015",
+      "es2015.promise"
     ],
     "jsx": "react",
     "jsxFactory": "h",
-
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-
     "noLib": false,
     "noEmitHelpers": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "noImplicitUseStrict": true,
-
     "suppressImplicitAnyIndexErrors": true,
     "skipLibCheck": true,
-
     "baseUrl": "./",
-
     "paths": {
       "*": [
-        "src/*"
+        "frontend/*"
       ]
     },
     "typeRoots": [
@@ -43,8 +38,7 @@
     ],
     "types": [
       "node",
-      "webpack",
-      "react"
+      "webpack"
     ]
   },
   "exclude": [
