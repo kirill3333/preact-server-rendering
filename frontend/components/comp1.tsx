@@ -15,9 +15,11 @@ export class ClassComponent1 extends Component<Props, State> {
 
   componentWillMount() {
     console.log('Component1: componentWillMount()')
-    this.setState({
-      property: true
-    })
+    setTimeout(() => {
+      this.setState({
+        property: true
+      })
+    }, 2000)
   }
 
   render() {
